@@ -1,0 +1,70 @@
+/////////////////////////////////////////////////////////////////////////////////////////
+//
+//  3.Write a program to check the number is perfect number or not.
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Class Name     : Logic
+//  Function Name  : checkPerfect
+//  Description    : Checks the given number is perfect or not.
+//  Input          : int
+//  Output         : void
+//  Author         : Anurag Gopal Satbhai
+//  Date           : 03/11/25
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+
+class Logic
+{
+    void checkPerfect(int n)
+   {
+        int iCnt = 0;
+        int iSum = 0;
+
+        for(iCnt = 1; iCnt <= (n/2); iCnt++)                    // Business Logic
+        {
+           if((n % iCnt) == 0)
+           {
+                iSum = iSum + iCnt;
+           }
+        }
+
+        if(iSum == n)
+        {
+            System.out.println("Perfect number");
+        }
+        else
+        {
+            System.out.println("Not perfect number");
+        }
+
+        
+   }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+//  Class Name     : program3
+//  Description    : Entry point for the application.
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+
+public class program3
+{
+    public static void main (String args[])
+    {
+        Logic obj = new Logic();
+        obj.checkPerfect(6);
+    }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////
+//
+//      Output : 
+//      Perfect number
+//
+//////////////////////////////////////////////////////////////////////////////////////////
+
+
